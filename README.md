@@ -207,6 +207,7 @@ Note that if you do not use these default settings, you will need to register a 
 After you have configured all migration settings, run
 
 ```bash
+python manage.py makemigrations cities
 python manage.py migrate cities
 ```
 
