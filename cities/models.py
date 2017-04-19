@@ -112,7 +112,7 @@ class BaseCountry(Place, SlugModel):
     language_codes = models.CharField(max_length=250, null=True)
     phone = models.CharField(max_length=20)
     continent = models.ForeignKey(swapper.get_model_name('cities', 'Continent'),
-                                  null=True, related_name='countries')
+                                  null=True, related_name='%(app_label)s_%(class)s_countries')
     tld = models.CharField(max_length=5, verbose_name='TLD')
     postal_code_format = models.CharField(max_length=127)
     postal_code_regex = models.CharField(max_length=255)
